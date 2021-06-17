@@ -1,8 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
-import { ThemeProvider } from "@material-ui/core/styles";
-import theme from "../src/theme";
 import Button from "@material-ui/core/Button";
+// import Modal from '@material-ui/core/Modal'
+
+// const handleOpen = () => '';
+// const handleClose = () => '';
+// const open = () => true;
+// const body = () => '';
+// ReactElement<string>
 
 export const Home = (): JSX.Element => (
   <div className="container">
@@ -14,12 +19,9 @@ export const Home = (): JSX.Element => (
       <h1 className="title">
         Welcome to <a href="https://nextjs.org">Next.js!</a>
       </h1>
-      {/* test */}
-      <ThemeProvider theme={theme}>
-        <p className="description">
-          Get started by editing <code>pages/index.tsx</code>
-        </p>
-      </ThemeProvider>
+      <p className="description">
+        Get started by editing <code>pages/index.tsx</code>
+      </p>
       <button
         onClick={() => {
           window.alert("With typescript and Jest");
@@ -30,6 +32,18 @@ export const Home = (): JSX.Element => (
       <Button variant="contained" color="primary">
         Test
       </Button>
+
+      {/* <button type="button" onClick={handleOpen}>
+        Open Modal
+      </button>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+      >
+        {body}
+      </Modal> */}
 
       <div className="grid">
         <a href="https://nextjs.org/docs" className="card">
