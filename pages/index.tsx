@@ -1,5 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from "next/head";
+import Image from "next/image";
+import { ThemeProvider } from "@material-ui/core/styles";
+import theme from "../src/theme";
+import Button from "@material-ui/core/Button";
 
 export const Home = (): JSX.Element => (
   <div className="container">
@@ -7,23 +10,26 @@ export const Home = (): JSX.Element => (
       <title>Create Next App</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-
     <main>
       <h1 className="title">
         Welcome to <a href="https://nextjs.org">Next.js!</a>
       </h1>
-
-      <p className="description">
-        Get started by editing <code>pages/index.tsx</code>
-      </p>
-
+      {/* test */}
+      <ThemeProvider theme={theme}>
+        <p className="description">
+          Get started by editing <code>pages/index.tsx</code>
+        </p>
+      </ThemeProvider>
       <button
         onClick={() => {
-          window.alert('With typescript and Jest')
+          window.alert("With typescript and Jest");
         }}
       >
         Test Button
       </button>
+      <Button variant="contained" color="primary">
+        Test
+      </Button>
 
       <div className="grid">
         <a href="https://nextjs.org/docs" className="card">
@@ -60,8 +66,8 @@ export const Home = (): JSX.Element => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by{' '}
-        <Image src="/vercel.svg" alt="Vercel Logo" height={'32'} width={'64'} />
+        Powered by{" "}
+        <Image src="/vercel.svg" alt="Vercel Logo" height={"32"} width={"64"} />
       </a>
     </footer>
 
@@ -206,6 +212,6 @@ export const Home = (): JSX.Element => (
       }
     `}</style>
   </div>
-)
+);
 
-export default Home
+export default Home;
