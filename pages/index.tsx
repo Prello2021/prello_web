@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Button from "@material-ui/core/Button";
+import Link from "next/link";
 // import Modal from '@material-ui/core/Modal'
 
 // const handleOpen = () => '';
@@ -29,9 +30,11 @@ export const Home = (): JSX.Element => (
       >
         Test Button
       </button>
-      <Button variant="contained" color="primary">
-        Test
-      </Button>
+      <Link href="/modal" passHref>
+        <Button variant="contained" color="primary">
+          Test
+        </Button>
+      </Link>
 
       {/* <button type="button" onClick={handleOpen}>
         Open Modal
