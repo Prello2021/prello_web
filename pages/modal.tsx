@@ -20,6 +20,20 @@ export const Modal = (): JSX.Element => (
         Get back home
       </Button>
     </Link>
+    <style jsx global>{`
+      html,
+      body {
+        color: #c9d1d9;
+        padding: 0;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    `}</style>
   </>
 );
 

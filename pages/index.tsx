@@ -96,6 +96,7 @@ export const Home = (): JSX.Element => (
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: #c9d1d9;
       }
 
       main {
@@ -105,6 +106,7 @@ export const Home = (): JSX.Element => (
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: #c9d1d9;
       }
 
       footer {
@@ -114,6 +116,7 @@ export const Home = (): JSX.Element => (
         display: flex;
         justify-content: center;
         align-items: center;
+        color: #c9d1d9;
       }
 
       footer img {
@@ -159,6 +162,7 @@ export const Home = (): JSX.Element => (
       }
 
       code {
+        color: "#0d1117",
         background: #fafafa;
         border-radius: 5px;
         padding: 0.75rem;
