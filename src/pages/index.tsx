@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Button from "@material-ui/core/Button";
 import Link from "next/link";
+import TaskList from "../components/TaskList";
+import TaskInput from "../components/TaskInput";
 // import Modal from '@material-ui/core/Modal'
 
 // const handleOpen = () => '';
@@ -20,6 +22,10 @@ export const Home = (): JSX.Element => (
       <h1 className="title">
         Welcome to <a href="https://nextjs.org">Next.js!</a>
       </h1>
+      <div>
+        <TaskInput />
+        <TaskList />
+      </div>
       <p className="description">
         Get started by editing <code>pages/index.tsx</code>
       </p>

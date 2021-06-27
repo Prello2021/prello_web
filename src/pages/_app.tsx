@@ -3,7 +3,9 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { CssBaseline } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/core/styles";
+import { Provider } from "react-redux";
 import theme from "./theme";
+import store from "../app/store";
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   React.useEffect(() => {
@@ -21,10 +23,12 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <Provider store={store}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </Provider>
     </>
   );
 }
