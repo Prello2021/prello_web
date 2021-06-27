@@ -1,5 +1,16 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from "next/head";
+import Image from "next/image";
+import Button from "@material-ui/core/Button";
+import Link from "next/link";
+import TaskList from "../components/TaskList";
+import TaskInput from "../components/TaskInput";
+// import Modal from '@material-ui/core/Modal'
+
+// const handleOpen = () => '';
+// const handleClose = () => '';
+// const open = () => true;
+// const body = () => '';
+// ReactElement<string>
 
 export const Home = (): JSX.Element => (
   <div className="container">
@@ -7,23 +18,41 @@ export const Home = (): JSX.Element => (
       <title>Create Next App</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-
     <main>
       <h1 className="title">
         Welcome to <a href="https://nextjs.org">Next.js!</a>
       </h1>
-
+      <div>
+        <TaskInput />
+        <TaskList />
+      </div>
       <p className="description">
         Get started by editing <code>pages/index.tsx</code>
       </p>
-
       <button
         onClick={() => {
-          window.alert('With typescript and Jest')
+          window.alert("With typescript and Jest");
         }}
       >
         Test Button
       </button>
+      <Link href="/modal" passHref>
+        <Button variant="contained" color="primary">
+          Test
+        </Button>
+      </Link>
+
+      {/* <button type="button" onClick={handleOpen}>
+        Open Modal
+      </button>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+      >
+        {body}
+      </Modal> */}
 
       <div className="grid">
         <a href="https://nextjs.org/docs" className="card">
@@ -60,8 +89,8 @@ export const Home = (): JSX.Element => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by{' '}
-        <Image src="/vercel.svg" alt="Vercel Logo" height={'32'} width={'64'} />
+        Powered by{" "}
+        <Image src="/vercel.svg" alt="Vercel Logo" height={"32"} width={"64"} />
       </a>
     </footer>
 
@@ -73,6 +102,7 @@ export const Home = (): JSX.Element => (
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: #c9d1d9;
       }
 
       main {
@@ -82,6 +112,7 @@ export const Home = (): JSX.Element => (
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: #c9d1d9;
       }
 
       footer {
@@ -91,6 +122,7 @@ export const Home = (): JSX.Element => (
         display: flex;
         justify-content: center;
         align-items: center;
+        color: #c9d1d9;
       }
 
       footer img {
@@ -136,6 +168,7 @@ export const Home = (): JSX.Element => (
       }
 
       code {
+        color: "#0d1117",
         background: #fafafa;
         border-radius: 5px;
         padding: 0.75rem;
@@ -206,6 +239,6 @@ export const Home = (): JSX.Element => (
       }
     `}</style>
   </div>
-)
+);
 
-export default Home
+export default Home;
